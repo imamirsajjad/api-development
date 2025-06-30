@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->string('name');
-            $table->unsignedInteger('status')->default(0); // Assuming status is an integer
+            $table->integer('status')->default(0); // Assuming status is an integer
             $table->timestamps();
         });
     }
